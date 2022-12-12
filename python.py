@@ -56,42 +56,5 @@ fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task")
 fig.update_yaxes(autorange="reversed") # otherwise tasks are listed from the bottom up
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown('''
-    This is a GANTT chart informing about periods of *automatic/manual* operations''')
+
     
-    if st.button('Generate Gantt Chart'): 
-        fig = px.timeline(
-                        df, 
-                        x_start="Start", 
-                        x_end="End", 
-                        y="Mode",
-                        color="Mode",
-                        hover_name="Mode"
-                        )
-
-        fig.update_yaxes(autorange="reversed")          #if not specified as 'reversed', the tasks will be listed from bottom up       
-        
-        fig.update_layout(
-                        title='Project Plan Gantt Chart',
-                        hoverlabel_bgcolor='#DAEEED',   #Change the hover tooltip background color to a universal light blue color. If not specified, the background color will vary by team or completion pct, depending on what view the user chooses
-                        bargap=0.2,
-                        height=600,              
-                        xaxis_title="", 
-                        yaxis_title="",                   
-                        title_x=0.5,                    #Make title centered                     
-                        xaxis=dict(
-                                tickfont_size=15,
-                                tickangle = 270,
-                                rangeslider_visible=True,
-                                side ="top",            #Place the tick labels on the top of the chart
-                                showgrid = True,
-                                zeroline = True,
-                                showline = True,
-                                showticklabels = True,
-                                tickformat="%x\n",      #Display the tick labels in certain format. To learn more about different formats, visit: https://github.com/d3/d3-format/blob/main/README.md#locale_format
-                                )
-                    )
-        
-        fig.update_xaxes(tickangle=0, tickfont=dict(family='Rockwell', color='blue', size=15))
-
-        st.plotly_chart(fig, use_container_width=True)  #Display the plotly chart in Streamlit
