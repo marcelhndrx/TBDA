@@ -2,7 +2,6 @@ from datetime import datetime,date,time,timezone,timedelta
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly
 import plotly.graph_objects as go
 import plotly.express as px
 from matplotlib import pyplot as plt
