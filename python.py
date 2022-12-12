@@ -1,3 +1,4 @@
+pip install plotly
 from datetime import datetime,date,time,timezone,timedelta
 import streamlit as st
 import pandas as pd
