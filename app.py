@@ -10,7 +10,7 @@ import os
 from sqlalchemy import create_engine #to access a sql database
 
 engine = create_engine('postgresql://lectura:ncorrea#2022@138.100.82.178:5432/2207')
-df = pd.read_sql_query("SELECT id_var, date, value FROM variable_log_float WHERE id_var = 575 LIMIT 3000", con=engine)
+df = pd.read_sql_query("SELECT id_var, date, value FROM variable_log_float WHERE id_var = 575 LIMIT 500", con=engine)
 # Convert the values in the "date" column to datetime objects
 df["date"] = pd.to_datetime(df["date"], unit="ms")
 
