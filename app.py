@@ -34,8 +34,8 @@ for index, row in rows.iterrows():
 
 
 # Create the Gantt chart using the data
-fig = px.timeline(data, x_start="start", x_end="finish", y="task", bar_width = 0.2)
-
+#fig = px.timeline(data, x_start="start", x_end="finish", y="task", bar_width = 0.2)
+fig = px.timeline(data, x_start="start", x_end="finish", y="task", bar_width=0.5)
 # # Show the Gantt chart
 # fig.show()                    #FORVISUALSTUDIOCODE
 
