@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import plotly.express as px
+import plotly-express as px
 import datetime
 import time
 import matplotlib.pyplot as plt
