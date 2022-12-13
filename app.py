@@ -5,6 +5,7 @@ import datetime
 import time
 import matplotlib.pyplot as plt
 import copy
+import streamlit as st
 import os
 from sqlalchemy import create_engine #to access a sql database
 
@@ -38,5 +39,3 @@ fig = px.timeline(data, x_start="start", x_end="finish", y="task")
 # Show the Gantt chart
 fig.show()
 
-
-    
