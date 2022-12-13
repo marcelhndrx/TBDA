@@ -35,11 +35,10 @@ for index, row in rows.iterrows():
 
 # Create the Gantt chart using the data
 fig = px.timeline(data, x_start="start", x_end="finish", y="status")
-
+fig.update_layout(title="Operational status (On/off)")
 
 #Show the Gantt chart
 
 #fig.show()                    #FORVISUALSTUDIOCODE
 
 st.plotly_chart(fig)
-
